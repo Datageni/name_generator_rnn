@@ -21,6 +21,7 @@ class RNN(nn.Module):
         # [Layer]{Softmax Layer}(Normalizes the output probability)
         self.softmax = nn.LogSoftmax(dim=1)
 
+    # [Method]{Forward Propagation}
     def forward(self, category, input, hidden):
         """
         Defines the forward pass of the RNN
@@ -42,6 +43,7 @@ class RNN(nn.Module):
         # Returining the output and the hidden 
         return output, hidden
     
+    # [Method]{Hidden State Initialization}
     def initHidden(self):
         """
         Initializes the hidden state to a tensor of zeros at the start of processing a sequence.
