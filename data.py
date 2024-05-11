@@ -1,6 +1,4 @@
-#  [Libraries]
-
-# [Library]{Data Preprocessing}
+# [Libraries]{Data Preprocessing}
 from io import open 
 import glob
 import os

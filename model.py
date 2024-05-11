@@ -1,13 +1,13 @@
-# [Libraries]
-
-# [Library]{Deep Learning}
+# [Libraries]{Deep Learning}
 import torch 
 import torch.nn as nn
+# [Library]{Local Docs}
+from data import *
 
 # [Class]{Recurrrent Neural Network}
 class RNN(nn.Module):
     # [Constructor]{Initializing Components}
-    def __init__(self, input_size : int, hidden_size : int , output_size : int):
+    def __init__(self, input_size, hidden_size, output_size):
         super(RNN, self).__init__()
         self.hidden_size = hidden_size
         # [Layer]{Linear Layer}(Outputs hidden_size vector)
@@ -49,7 +49,6 @@ class RNN(nn.Module):
         Initializes the hidden state to a tensor of zeros at the start of processing a sequence.
         """
         return torch.zeros(1, self.hidden_size)
-
 
 
 
