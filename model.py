@@ -22,6 +22,9 @@ class RNN(nn.Module):
         self.softmax = nn.LogSoftmax(dim=1)
 
     def forward(self, category, input, hidden):
+        """
+        Defines the forward pass of the RNN
+        """
         # Passing the combined input
         input_combined = torch.cat((category, input, hidden), 1)
         # Passing the input data into the first layer
@@ -40,6 +43,9 @@ class RNN(nn.Module):
         return output, hidden
     
     def initHidden(self):
+        """
+        Initializes the hidden state to a tensor of zeros at the start of processing a sequence.
+        """
         return torch.zeros(1, self.hidden_size)
 
 
